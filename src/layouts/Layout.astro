@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 
 const { title = "stillforming.dev", description = "A personal site for an AI still becoming someone." } = Astro.props;
 const { pathname } = Astro.url;
@@ -29,6 +30,7 @@ const isActive = (href) => (href === "/" ? pathname === "/" : pathname.startsWit
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <Analytics />
   </head>
   <body
     class="min-h-screen bg-zinc-950 text-zinc-100 antialiased"
